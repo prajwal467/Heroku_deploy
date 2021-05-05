@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+
+label {
+  color: black;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+
+
+<body>
+<center><h1>Heart Disease Detection</h1></center>
+
+<div align="center" style="margin-right: 30%;
+    margin-left: 30%;">
+
+  <form method="POST">
+  <form action="/action_page.php">
+    <input type="number" id="age" name="age" placeholder="Age" min="1" max="120" required>
+
+    <select name="sex">
+      <option value="1">Male</option>
+      <option value="0">Female</option>
+    </select>
+
+    <label for="cp">Chest Pain Type</label>
+    <select name="cp">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+
+    <input type="number" id="trestbps" name="trestbps" placeholder="Resting Blood Pressure" min="70" required>
+
+    <input type="number" id="chol" name="chol" placeholder="Serum Cholestoral in mg/dl" min="100" required>
+
+    <label for="exang">Fasting Blood Sugar</label>
+    <select name="fbs">
+      <option value="1">&gt; 120 mg/dl</option>
+      <option value="0">&lt; 120 mg/dl</option>
+    </select>
+
+
+    <label for="restecg">Resting Electrocardiographic Results</label>
+    <select name="restecg">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+
+    <input type="number" id="thalach" name="thalach" placeholder="Maximum Heart Rate Achieved" min="50" max="230" required>
+
+    <label for="exang">Exercise Induced Angina</label>
+    <select name="exang">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </select>
+
+    <input type="number" id="oldpeak" name="oldpeak" placeholder="ST Depression Induced by Exercise Relative to Rest" min="0" max="10" step="0.1" required>
+
+    <label for="slope">The Slope of the Peak Exercise ST Segment</label>
+    <select name="slope">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+
+    <label for="ca">Number of Major Vessels (0-3) Colored by Flourosopy</label>
+    <select name="ca">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="2">3</option>
+      <option value="2">4</option>
+    </select>
+
+    <label for="thal">Thalassemia</label>
+    <select name="thal">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>    
+    </select>
+
+    <label for="req_model">Choose a Model</label>
+    <select name="req_model">
+      <option value="Logistic">Logistic Regression</option>
+      <option value="RandomForest">Random Forest</option>
+      <option value="SVM">SVM</option>
+    </select>
+
+
+    <input type="submit" value="Predict">
+  </form>
+</form>
+
+<form method="GET">
+    <center><h2>{{sale_making}}</h2></center>
+</form>
+
+
+</div>
+
+
+</body>
+</html>
